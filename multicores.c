@@ -9,14 +9,15 @@ int count4 = 0;
 
 // Function for the first thread to execute
 void* primes1(void* arg) {
-    
     int i1;
     int j1;
     char is_prime;
+    int square;
 
     for (i1=3;i1<38000000;i1+=2){
         is_prime = 1;
-        for (j1 = 3; j1<=(sqrt(i1)); j1+=2){
+        square = sqrt(i1);
+        for (j1 = 3; j1<=square; j1+=2){
             if (i1%j1==0){
                 is_prime = 0;
                 break;
@@ -31,11 +32,12 @@ void* primes2(void* arg) {
     int i2;
     int j2;
     char is_prime;
-
+    int square;
 
     for (i2=38000001;i2<62000000;i2+=2){
         is_prime = 1;
-        for (j2 = 3; j2<=(sqrt(i2)); j2+=2){
+        square = sqrt(i2);
+        for (j2 = 3; j2<=square; j2+=2){
             if (i2%j2==0){
                 is_prime = 0;
                 break;
@@ -50,10 +52,12 @@ void* primes3() {
     int i3;
     int j3;
     char is_prime;
+    int square;
 
     for (i3=62000001;i3<82000000;i3+=2){
         is_prime = 1;
-        for (j3 = 3; j3<=(sqrt(i3)); j3+=2){
+        square = sqrt(i3);
+        for (j3 = 3; j3<=square; j3+=2){
             if (i3%j3==0){
                 is_prime = 0;
                 break;
@@ -68,10 +72,12 @@ void* primes4() {
     int i4;
     int j4;
     char is_prime;
+    int square;
 
     for (i4=82000001;i4<100000000;i4+=2){
         is_prime = 1;
-        for (j4 = 3; j4<=(sqrt(i4)); j4+=2){
+        square = sqrt(i4);
+        for (j4 = 3; j4<=square; j4+=2){
             if (i4%j4==0){
                 is_prime = 0;
                 break;
